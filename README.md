@@ -34,8 +34,7 @@ For specific, detailed instructions, look at the project instructions in the Uda
 
 ## Project description
 
-The website is divided into four main sections: Hiking, Camping, Wildlife, and Gear. Each section features articles, guides, and photos that offer practical tips, advice, and inspiration for anyone interested in that particular aspect of outdoor exploration. For example, the Hiking section might include guides to popular hiking trails, safety tips, and advice on gear and equipment, while the Wildlife section might feature articles on birdwatching, animal tracking, and conservation efforts.
-
+The website is divided into five main sections: Hiking, Climbing, Camping, Wildlife, and Adventure sports. Each section features articles, guides, and photos that offer practical tips, advice, and inspiration for anyone interested in that particular aspect of outdoor exploration. For example, the Hiking section might include guides to popular hiking trails, safety tips, and advice on gear and equipment, while the Wildlife section might feature articles on birdwatching, animal tracking, and conservation efforts.
 
 [Back to top](#table-of-contents)
 
@@ -51,7 +50,7 @@ The website is divided into four main sections: Hiking, Camping, Wildlife, and G
 
 ## Demo
 
-You can see a live demo of this project at (Live demo link)
+You can see a live demo of this project at [(Live demo link)](https://monumental-begonia-9ae62f.netlify.app/)
 
 [Back to top](#table-of-contents)
 
@@ -59,15 +58,13 @@ You can see a live demo of this project at (Live demo link)
 
 To run the project, follow these steps:
 
-1. Download or clone the project repository from the GitHub repository: (Repo Link)
+1. Download or clone the project repository from the GitHub repository: [(Repo Link)](https://github.com/AnupamDey/Project2-Landing-Page.git)
 
 2. Open the index.html file in your web browser.
 
 3. The landing page should be displayed in your web browser.
 
 That's it! You can now view and interact with the landing page.
-
-[Back to top](#table-of-contents)
 
 [Back to top](#table-of-contents)
 
