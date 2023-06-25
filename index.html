@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Nature Explorer</title>
+  <meta name="description"
+    content="Welcome to Nature Explorer where we provide you with the best outdoor experiences!">
+  <!-- Load Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@900&family=Merriweather&display=swap"
+    rel="stylesheet">
+  <!-- Load Styles -->
+  <link href="css/styles.css" rel="stylesheet">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/favicon16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/favicon32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/favicon96x96.png" sizes="96x96">
+</head>
+
+<body>
+  <!-- HTML Follows BEM naming conventions
+  IDs are only used for sections to connect menu achors to sections -->
+  <header class="page__header">
+    <!-- Logo -->
+    <a href="/" aria-label="Nature Explorer Homepage">
+      <svg class="logo" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="63.539" height="55.074" viewBox="0 0 16.811 14.572">
+        <g fill="#af2222" stroke-width=".818" color="#000">
+          <path d="M-76.53-162.354a5.962 5.962 0 0 1-5.962 5.961 5.962 5.962 0 0 1-5.961-5.961 5.962 5.962 0 0 1 5.961-5.962 5.962 5.962 0 0 1 5.962 5.962z" style="-inkscape-stroke:none" transform="rotate(173.115 -52.46 -92.277) scale(1.22202)"/>
+          <path d="M-76.53-162.354a5.962 5.962 0 1 1-11.923 0 5.962 5.962 0 0 1 11.923 0z" style="-inkscape-stroke:none" transform="rotate(173.115 -52.46 -92.277) scale(1.22202)"/>
+        </g>
+        <path d="M11.568 12.03c-.394-.132-1.328-.561-2.076-.954-1.647-.864-2.45-1.052-3.631-.852-.442.075-1.006.22-1.255.32-.25.102-.465.166-.48.144-.065-.101 1.005-.732 1.562-.92.768-.26 2.51-.299 3.191-.071.274.091 1.162.51 1.972.93.81.419 1.757.846 2.104.949 1.16.341 2.272.178 3.353-.495.277-.172.503-.288.503-.258 0 .117-1.227.94-1.702 1.143-.776.331-2.641.364-3.54.064zM1.113 10.4C3.345 8.595 5.618 6.26 7.26 4.085l.872-1.155.289.545c.159.3.607 1.052.996 1.67l.708 1.124.536-.688.535-.687.329.65c.439.87 1.563 2.543 2.608 3.883.468.6.851 1.113.851 1.139 0 .026-.27-.162-.602-.418-.793-.614-1.869-1.762-2.62-2.798-.605-.832-.608-.835-.808-.611-.243.272-.256.456-.05.689.152.173 2.133 2.718 2.294 2.948.137.195-.97-.608-1.544-1.121-.952-.851-2.143-2.238-3.366-3.918-.175-.24-.182-.236-1.14.841-1.573 1.77-3.042 3.059-4.54 3.986-.841.52-2.339 1.217-2.604 1.212-.052-.001.447-.44 1.11-.976z"/>
+      </svg>
+    </a>
+    <nav class="navbar__menu">
+      <!-- Navigation starts as empty UL that will be populated with JS -->
+      <ul id="navbar__list"></ul>
+    </nav>
+  </header>
+  <!-- When the header is hide this menu appear to allow user to show the header -->
+  <button class="menu__button floating__btn" title="Show menu">
+    <svg class="svg" viewBox="0 0 24 24" height="24" width="24">
+      <path d="M3 6h18v2.016h-18v-2.016zM3 12.984v-1.969h18v1.969h-18zM3 18v-2.016h18v2.016h-18z"></path>
+    </svg>
+  </button>
+  <main>
+    <header class="main__hero">
+      <h1>Experience Nature</h1>
+    </header>
+    <!-- Each Section has an ID (used for the anchor) and
+    a data attribute that will populate the li node.
+    Adding more sections will automatically populate nav.
+    The first section is set to active class by default -->
+    <section id="section1" data-nav="Hiking" class="your-active-class">
+      <div class="landing__container">
+        <h2>
+          <span>Hiking</span>
+          <button type="button" title="Collapse" aria-label="Collapse">
+            <svg class="svg collapse__icon" viewBox="0 0 24 24" height="24" width="24">
+              <path d="M16.594 8.578l1.406 1.406-6 6-6-6 1.406-1.406 4.594 4.594z"></path>
+            </svg>
+            <svg class="svg collapse__icon" viewBox="0 0 24 24" height="24" width="24">
+              <path d="M12 8.016l6 6-1.406 1.406-4.594-4.594-4.594 4.594-1.406-1.406z"></path>
+            </svg>
+          </button>
+        </h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi error magni voluptate in veritatis 
+          cupiditate rerum eum nesciunt vero earum, 
+          omnis nobis, repellendus dolorum, voluptas impedit laborum et ducimus architecto. Lorem ipsum dolor sit amet 
+          consectetur adipisicing elit. 
+          Ad nobis reiciendis, explicabo consequatur dignissimos quod.
+        </p>
+
+        <div class="card__set">
+          <a class="card" href="#">
+            <img src="assets/hiking/jake-melara-Yh6K2eTr_FY-unsplash.webp" alt="hiking illustration" loading="lazy">
+            <div class="card__content">
+              <h3>Types of Hiking Trails</h3>
+              <small>We have a wide range of hiking...</small>
+            </div>
+          </a>
+          <a class="card" href="#">
+            <img src="assets/hiking/jon-flobrant-_r19nfvS3wY-unsplash.webp" alt="hiking illustration" loading="lazy">
+            <div class="card__content">
+              <h3>Hiking Gear and Essentials</h3>
+              <small>Before embarking on a hiking...</small>
+            </div>
+          </a>
+          <a class="card" href="#">
+            <img src="assets/hiking/toomas-tartes-Yizrl9N_eDA-unsplash.webp" alt="hiking illustration" loading="lazy">
+            <div class="card__content">
+              <h3>Hiking Safety Tips</h3>
+              <small>Hiking is a thrilling and...</small>
+            </div>
+          </a>
+          <a class="card" href="#">
+            <img src="assets/hiking/ashley-knedler-Pf5Pj7A5ddA-unsplash.webp" alt="hiking illustration"
+              loading="lazy">
+            <div class="card__content">
+              <h3>Hiking Destinations</h3>
+              <small>We showcase some of the...</small>
+            </div>
+          </a>
+          <a class="card" href="#">
+            <img src="assets/hiking/stephen-leonardi-6E6oMx-69Ns-unsplash.webp" alt="hiking illustration"
+              loading="lazy">
+            <div class="card__content">
+              <h3>Hiking Community</h3>
+              <small>Hiking is not just about the...</small>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section id="section2" data-nav="Climbing">
+      <div class="landing__container">
+        <h2>
+          <span>Climbing</span>
+          <button type="button" title="Collapse" aria-label="Collapse">
+            <svg class="svg collapse__icon" viewBox="0 0 24 24" height="24" width="24">
+              <path d="M16.594 8.578l1.406 1.406-6 6-6-6 1.406-1.406 4.594 4.594z"></path>
+            </svg>
+            <svg class="svg collapse__icon" viewBox="0 0 24 24" height="24" width="24">
+              <path d="M12 8.016l6 6-1.406 1.406-4.594-4.594-4.594 4.594-1.406-1.406z"></path>
+            </svg>
+          </button>
+        </h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi error magni voluptate in veritatis 
+          cupiditate rerum eum nesciunt vero earum, 
+          omnis nobis, repellendus dolorum, voluptas impedit laborum et ducimus architecto. Lorem ipsum dolor sit amet 
+          consectetur adipisicing elit. 
+          Ad nobis reiciendis, explicabo consequatur dignissimos quod.
+        </p>
+
+        <div class="card__set">
+          <a class="card" href="#">
+            <img src="assets/climbing/hu-chen-FZ0qzjVF_-c-unsplash.webp" alt="climbing illustration" loading="lazy">
+            <div class="card__content">
+              <h3>Types of Climbing</h3>
+              <small>We offer a variety of climbing...</small>
+            </div>
+          </a>
+          <a class="card" href="#">
+            <img src="assets/climbing/yns-plt-NY1D4Zni7fc-unsplash.webp" alt="climbing illustration" loading="lazy">
+            <div class="card__content">
+              <h3>Gear and Essentials</h3>
+              <small>Climbing requires specialized...</small>
+            </div>
+          </a>
+          <a class="card" href="#">
+            <img src="assets/climbing/jef-willemyns-mluUYXoTotY-unsplash.webp" alt="climbing illustration"
+              loading="lazy">
+            <div class="card__content">
+              <h3>Safety Tips</h3>
+              <small>Climbing is an exhilarating...</small>
+            </div>
+          </a>
+          <a class="card" href="#">
+            <img src="assets/climbing/patrick-hendry-w5hNCbJfX3w-unsplash.webp" alt="climbing illustration"
+              loading="lazy">
+            <div class="card__content">
+              <h3>Destinations</h3>
+              <small>We showcase some of the...</small>
+            </div>
+          </a>
+          <a class="card" href="#">
+            <img src="assets/climbing/sylvain-mauroux-WI8phMvAEMI-unsplash.webp" alt="climbing illustration"
+              loading="lazy">
+            <div class="card__content">
+              <h3>Community</h3>
+              <small>Climbing is not just about...</small>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section id="section3" data-nav="Camping">
+      <div class="landing__container">
+        <h2>
+          <span>Camping</span>
+          <button type="button" title="Collapse" aria-label="Collapse">
+            <svg class="svg collapse__icon" viewBox="0 0 24 24" height="24" width="24">
+              <path d="M16.594 8.578l1.406 1.406-6 6-6-6 1.406-1.406 4.594 4.594z"></path>
+            </svg>
+            <svg class="svg collapse__icon" viewBox="0 0 24 24" height="24" width="24">
+              <path d="M12 8.016l6 6-1.406 1.406-4.594-4.594-4.594 4.594-1.406-1.406z"></path>
+            </svg>
+          </button>
+        </h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi error magni voluptate in veritatis 
+          cupiditate rerum eum nesciunt vero earum, 
+          omnis nobis, repellendus dolorum, voluptas impedit laborum et ducimus architecto. Lorem ipsum dolor sit amet 
+          consectetur adipisicing elit. 
+          Ad nobis reiciendis, explicabo consequatur dignissimos quod.
+        </p>
+
+        <div class="card__set">
+          <a class="card" href="#">
+            <img src="assets/camping/blake-wisz-TcgASSD5G04-unsplash.webp" alt="Camping illustration" loading="lazy">
+            <div class="card__content">
+              <h3>Types of Camping</h3>
+              <small>We provide information on...</small>
+            </div>
+          </a>
+          <a class="card" href="#">
+            <img src="assets/camping/pars-sahin-V7uP-XzqX18-unsplash.webp" alt="Camping illustration" loading="lazy">
+            <div class="card__content">
+              <h3>Gear and Essentials</h3>
+              <small>Having the right gear and...</small>
+            </div>
+          </a>
+          <a class="card" href="#">
+            <img src="assets/camping/tommy-lisbin-2DH-qMX6M4E-unsplash.webp" alt="Camping illustration"
+              loading="lazy">
+            <div class="card__content">
+              <h3>Choosing a Campsite</h3>
+              <small>Selecting the perfect...</small>
+            </div>
+          </a>
+          <a class="card" href="#">
+            <img src="assets/camping/scott-goodwill-y8Ngwq34_Ak-unsplash.webp" alt="Camping illustration"
+              loading="lazy">
+            <div class="card__content">
+              <h3>Campfire Cooking</h3>
+              <small>One of the most enjoyable...</small>
+            </div>
+          </a>
+          <a class="card" href="#">
+            <img src="assets/camping/dominik-jirovsky-re2LZOB2XvY-unsplash.webp" alt="Camping illustration"
+              loading="lazy">
+            <div class="card__content">
+              <h3>Leave No Trace Principles</h3>
+              <small>As outdoor enthusiasts, we...</small>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- Add fourth section -->
+    <section id="section4" data-nav="Wildlife">
+      <div class="landing__container">
+        <h2>
+          <span>Wildlife</span>
+          <button type="button" title="Collapse" aria-label="Collapse">
+            <svg class="svg collapse__icon" viewBox="0 0 24 24" height="24" width="24">
+              <path d="M16.594 8.578l1.406 1.406-6 6-6-6 1.406-1.406 4.594 4.594z"></path>
+            </svg>
+            <svg class="svg collapse__icon" viewBox="0 0 24 24" height="24" width="24">
+              <path d="M12 8.016l6 6-1.406 1.406-4.594-4.594-4.594 4.594-1.406-1.406z"></path>
+            </svg>
+          </button>
+        </h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi error magni voluptate in veritatis 
+          cupiditate rerum eum nesciunt vero earum, 
+          omnis nobis, repellendus dolorum, voluptas impedit laborum et ducimus architecto. Lorem ipsum dolor sit amet 
+          consectetur adipisicing elit. 
+          Ad nobis reiciendis, explicabo consequatur dignissimos quod.
+        </p>
+
+        <div class="card__set">
+          <a class="card" href="#">
+            <img src="assets/wildlife/redcharlie-redcharlie1-xtvo0ffGKlI-unsplash.webp" alt="Wildlife illustration"
+              loading="lazy">
+            <div class="card__content">
+              <h3>Wildlife Species</h3>
+              <small>We provide information on...</small>
+            </div>
+          </a>
+          <a class="card" href="#">
+            <img src="assets/wildlife/sutirta-budiman-Jgiv1rSIpVM-unsplash.webp" alt="Wildlife illustration"
+              loading="lazy">
+            <div class="card__content">
+              <h3>Bird Watching</h3>
+              <small>Bird watching is a popular...</small>
+            </div>
+          </a>
+          <a class="card" href="#">
+            <img src="assets/wildlife/scott-carroll-favQn8WgRyk-unsplash.webp" alt="Wildlife illustration"
+              loading="lazy">
+            <div class="card__content">
+              <h3>Animal Photography</h3>
+              <small>Capturing wildlife through...</small>
+            </div>
+          </a>
+          <a class="card" href="#">
+            <img src="assets/wildlife/gwen-weustink-I3C1sSXj1i8-unsplash.webp" alt="Wildlife illustration"
+              loading="lazy">
+            <div class="card__content">
+              <h3>Wildlife Conservation</h3>
+              <small>As outdoor enthusiasts, we...</small>
+            </div>
+          </a>
+          <a class="card" href="#">
+            <img src="assets/wildlife/david-clode-nyvR6wbU1ho-unsplash.webp" alt="Wildlife illustration"
+              loading="lazy">
+            <div class="card__content">
+              <h3>Wildlife Watching Ethics</h3>
+              <small>Watching wildlife is a...</small>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Add fifth section -->
+    <section id="section5" data-nav="Adventure Sports">
+      <div class="landing__container">
+        <h2>
+          <span>Adventure Sports</span>
+          <button type="button" title="Collapse" aria-label="Collapse">
+            <svg class="svg collapse__icon" viewBox="0 0 24 24" height="24" width="24">
+              <path d="M16.594 8.578l1.406 1.406-6 6-6-6 1.406-1.406 4.594 4.594z"></path>
+            </svg>
+            <svg class="svg collapse__icon" viewBox="0 0 24 24" height="24" width="24">
+              <path d="M12 8.016l6 6-1.406 1.406-4.594-4.594-4.594 4.594-1.406-1.406z"></path>
+            </svg>
+          </button>
+        </h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi error magni voluptate in veritatis 
+          cupiditate rerum eum nesciunt vero earum, 
+          omnis nobis, repellendus dolorum, voluptas impedit laborum et ducimus architecto. Lorem ipsum dolor sit amet 
+          consectetur adipisicing elit. 
+          Ad nobis reiciendis, explicabo consequatur dignissimos quod.
+        </p>
+
+        <div class="card__set">
+          <a class="card" href="#">
+            <img src="assets/sports/Adventure-sports-near-Haridwar.webp" alt="Sports 1"
+              loading="lazy">
+            <div class="card__content">
+              <h3>Adventure sports near haridwar</h3>
+              <small>We provide information on...</small>
+            </div>
+          </a>
+          <a class="card" href="#">
+            <img src="assets/sports/image2.jpg" alt="Sports 2"
+              loading="lazy">
+            <div class="card__content">
+              <h3>Kayaking</h3>
+              <small>Kayaking is a popular...</small>
+            </div>
+          </a>
+          <a class="card" href="#">
+            <img src="assets/sports/image6.jpg" alt="Sports 3"
+              loading="lazy">
+            <div class="card__content">
+              <h3>Bungee Jumping</h3>
+              <small>Sport for Adrenaline junkies ...</small>
+            </div>
+          </a>
+          <a class="card" href="#">
+            <img src="assets/sports/image4.jpg" alt="Sports 4"
+              loading="lazy">
+            <div class="card__content">
+              <h3>Extreme adventure</h3>
+              <small>Challenging your fears ...</small>
+            </div>
+          </a>
+          <a class="card" href="#">
+            <img src="assets/sports/image5.jpg" alt="Sports 5"
+              loading="lazy">
+            <div class="card__content">
+              <h3>Mountain Trek</h3>
+              <small>Reaching unmaginable heights ...</small>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <footer class="page__footer">
+    <p>© Udacity, <small><i>by Anupam Shankar Dey</i></small></p>
+  </footer>
+
+  <button class="to__top floating__btn" title="Back to the top">
+    <b>Top</b>
+    <svg class="page__progress">
+      <circle cx="50%" cy="50%" r="45%"></circle>
+    </svg>
+  </button>
+
+  <script src="js/app.js"></script>
+</body>
+
+</html>
